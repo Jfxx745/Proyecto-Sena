@@ -3,8 +3,14 @@ from datetime import datetime
 
 # Software para calcular valor a pagar en el parqueadero con ticket
 
-# Entrada de datos
-placaVehiculo = input("Ingrese la placa del vehículo: ")
+# Validar placa (debe tener 6 caracteres)
+while True:
+    placaVehiculo = input("Ingrese la placa del vehículo (6 caracteres): ")
+    if len(placaVehiculo) == 6:
+        break
+    else:
+        print("Error: la placa debe tener exactamente 6 caracteres.")
+
 marcaVehiculo = input("Ingrese la marca del vehículo: ")
 
 horaEntrada = input("Ingrese la hora de entrada (HH:MM): ")
