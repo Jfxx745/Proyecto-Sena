@@ -3,7 +3,7 @@ from datetime import datetime
 
 # Software para calcular valor a pagar en el parqueadero con ticket
 
-# Validar placa (debe tener 6 caracteres)
+# Validar placa
 while True:
     placaVehiculo = input("Ingrese la placa del vehículo (6 caracteres): ")
     if len(placaVehiculo) == 6:
@@ -26,7 +26,7 @@ ticket = random.randint(1000, 9999)
 
 # Cálculo del tiempo de estadía
 tiempo = horaSalida_dt - horaEntrada_dt
-tiempoEstadia = tiempo.total_seconds() / 3600  # convertir a horas
+tiempoEstadia = tiempo.total_seconds() / 3600  
 
 # Tarifas
 precioPrimeraHora = 3000
